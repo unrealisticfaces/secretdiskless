@@ -10,7 +10,7 @@ export default function Services() {
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-4 md:mb-6">What I Actually <span className="text-[#d4af37]">Do.</span></h1>
           <p className="text-sm md:text-base text-gray-400 leading-relaxed">
-            No corporate buzzwords—just straightforward, reliable IT solutions. Here is exactly how I can help your business or internet cafe run smoothly.
+            No corporate buzzwords just straightforward, reliable IT solutions. Here is exactly how I can help your business or internet cafe run smoothly.
           </p>
         </div>
 
