@@ -36,11 +36,11 @@ export default function Projects() {
       tags: ["React", "Vite", "PayMongo", "Firebase"]
     },
     {
-      title: "Game Update Checker",
-      images: ["/assets/clients/1.webp", "/assets/clients/10.webp", "/assets/clients/13.webp"],
-      description: "C# application monitoring build IDs and synchronizing files across diskless servers.",
-      details: "This tool significantly reduces manual patching time by automating the deployment of game updates across hundreds of client PCs simultaneously. Built entirely using C# and .NET framework.",
-      tags: ["C#", ".NET", "TCP/IP"]
+      title: "Clinic Management System",
+      images: ["/assets/clients/fano1.webp", "/assets/clients/fano2.webp"],
+      description: "A web-based Clinic Management System developed using React.js and Vite.js that helps clinics efficiently manage patients, appointments, records, and daily operations in one centralized platform",
+      details: "The system offers an intuitive and responsive user interface that enables clinic staff to efficiently register patients, schedule and manage appointments, maintain electronic medical records, monitor consultation histories, and organize essential healthcare information. By replacing traditional paper-based processes, the platform improves workflow efficiency, reduces administrative workload, minimizes human error, and enhances the overall patient experience.",
+      tags: ["React", "Vite", "Nodejs", "Firebase Database", "Tailwind CSS3"]
     }
   ];
 
