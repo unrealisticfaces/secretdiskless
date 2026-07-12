@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  
+  --color-bg-base: #050505; 
+  --color-bg-card: #0c0c0c; 
+  --color-accent: #d4af37;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+.animated-grid {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(212, 175, 55, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50px); }
+}
+
+.animate-breathe {
+  animation: breathe 8s ease-in-out infinite alternate;
+}
+
+@keyframes breathe {
+  0% { opacity: 0.3; transform: scale(1); }
+  100% { opacity: 0.6; transform: scale(1.2); }
+}
+
+/* --- NEW: SERVICES VISUAL ANIMATIONS --- */
+
+/* Diskless Server Pulse & Data Drop */
+@keyframes serverPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(212,175,55,0.1); border-color: rgba(255,255,255,0.1); }
+  50% { box-shadow: 0 0 20px rgba(212,175,55,0.4); border-color: rgba(212,175,55,0.5); }
+}
+.animate-server { animation: serverPulse 3s infinite; }
+
+@keyframes dropData {
+  0% { transform: translateY(-10px); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(40px); opacity: 0; }
+}
+.animate-drop { animation: dropData 2s infinite linear; }
+
+/* Web Dev UI Build Animation */
+@keyframes uiBuild {
+  0% { opacity: 0; transform: translateY(5px) scale(0.98); }
+  20%, 80% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-5px) scale(0.98); }
+}
+.animate-ui-build { animation: uiBuild 4s infinite cubic-bezier(0.4, 0, 0.2, 1); }
+.animation-delay-500 { animation-delay: 0.5s; }
+.animation-delay-1000 { animation-delay: 1s; }
+
+/* Network Packet Movement */
+@keyframes packetMove {
+  0% { left: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+.animate-packet { animation: packetMove 1.5s infinite linear; }
+.animation-delay-750 { animation-delay: 0.75s; }
+
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--color-bg-base); }
+::-webkit-scrollbar-thumb { background: #1a1a1a; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+.glass-card {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 40px -10px rgba(212, 175, 55, 0.15);
+}
