@@ -13,7 +13,7 @@ export default function Footer() {
         
         {/* Right: System Status */}
         <div className="flex items-center gap-2">
-          <span className="text-[10px] text-gray-500 font-mono tracking-widest uppercase">Network Secure</span>
+          <span className="text-[10px] text-gray-500 font-mono tracking-widest uppercase">Keith David Dalocanog</span>
           <div className="w-1.5 h-1.5 rounded-full bg-[#d4af37] shadow-[0_0_8px_#d4af37] animate-pulse"></div>
         </div>
 
