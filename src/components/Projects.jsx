@@ -29,10 +29,10 @@ export default function Projects() {
       tags: ["React", "Vite", "Electron", "Local DB", "Firebase"]
     },
     {
-      title: "MC | Services",
-      images: ["/assets/clients/MC1.webp", "/assets/clients/MC2.webp", "/assets/clients/MC3.webp"],
-      description: "Professional business platform designed to showcase company services and enable seamless online transactions.",
-      details: "Created to strengthen online presence by presenting the brand and portfolio in a clean, organized layout. With intuitive navigation and modern design, customers can quickly find information and process transactions securely.",
+      title: "GamerzNet Website",
+      images: ["/assets/clients/Gamers3.webp", "/assets/clients/Gamers1.webp", "/assets/clients/Gamers2.webp"],
+      description: "GamerzNet is a modern gaming platform that brings gamers together through a clean, responsive, and user-friendly interface. It provides easy access to gaming content, updates, and community features in one place.",
+      details: "Built with React.js and Vite.js, GamerzNet delivers fast performance, smooth navigation, and a seamless experience across desktop and mobile devices. Its modern design makes it an ideal platform for gamers to explore and stay connected.",
       tags: ["React", "Vite", "PayMongo", "Firebase"]
     },
     {
