@@ -15,6 +15,14 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "Invoice Generator",
+      images: ["/assets/clients/inv2.webp", "/assets/clients/inv1.webp", "/assets/clients/inv4.webp"],
+      description: "Create a modern, responsive Invoice Generator for a gaming café website.",
+      details: "Develop a web-based invoice generator that allows staff to quickly create professional invoices for customers.",
+      tags: ["React", "Vite", "HTML5", "CSS3", "JavaScript"],
+      link: "https://projectxinvoice.vercel.app/"
+    },
+    {
       title: "Red Gaming Website",
       images: ["/assets/clients/RED1.webp", "/assets/clients/RED2.webp", "/assets/clients/RED3.webp"],
       description: "Business website designed to showcase a gaming café's services, pricing, available games, and promotions.",
@@ -41,7 +49,7 @@ export default function Projects() {
       description: "A web-based Clinic Management System developed using React.js and Vite.js that helps clinics efficiently manage patients, appointments, records, and daily operations in one centralized platform",
       details: "The system offers an intuitive and responsive user interface that enables clinic staff to efficiently register patients, schedule and manage appointments, maintain electronic medical records, monitor consultation histories, and organize essential healthcare information. By replacing traditional paper-based processes, the platform improves workflow efficiency, reduces administrative workload, minimizes human error, and enhances the overall patient experience.",
       tags: ["React", "Vite", "Nodejs", "Firebase Database", "Tailwind CSS3"]
-    }
+    },
   ];
 
   const handleNextImage = (e) => {
@@ -105,17 +113,15 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Responsive Modal */}
       {selectedProject && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 bg-black/95 backdrop-blur-md" 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 bg-black/95 backdrop-blur-md"
           onClick={() => setSelectedProject(null)}
         >
           <div 
             className="bg-[#0c0c0c] rounded-xl w-full max-w-5xl h-[90vh] md:h-auto md:max-h-[85vh] shadow-2xl flex flex-col lg:flex-row overflow-hidden relative animate-in fade-in zoom-in-95 duration-200"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button - Responsive placement */}
             <button 
               onClick={() => setSelectedProject(null)}
               className="absolute top-2 right-2 lg:top-4 lg:right-4 z-50 w-8 h-8 lg:w-10 lg:h-10 bg-black/80 hover:bg-[#d4af37] hover:text-black text-white rounded-full flex items-center justify-center transition-colors backdrop-blur-md border border-white/10"
@@ -123,7 +129,6 @@ export default function Projects() {
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
 
-            {/* Left Side: Image Slider */}
             <div className="w-full lg:w-[55%] bg-black relative flex flex-col shrink-0 border-b lg:border-b-0 lg:border-r border-white/10">
               <div className="relative w-full h-[35vh] lg:h-[60vh] flex items-center justify-center bg-[#050505]">
                 <img 
@@ -144,7 +149,6 @@ export default function Projects() {
                 )}
               </div>
 
-              {/* Thumbnails */}
               {selectedProject.images.length > 1 && (
                 <div className="h-20 lg:h-24 bg-[#0a0a0a] flex items-center gap-2 lg:gap-3 px-4 lg:px-6 overflow-x-auto scrollbar-hide">
                   {selectedProject.images.map((img, idx) => (
@@ -167,7 +171,6 @@ export default function Projects() {
               )}
             </div>
 
-            {/* Right Side: Details */}
             <div className="w-full lg:w-[45%] p-6 lg:p-10 flex flex-col overflow-y-auto custom-scrollbar">
               <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 pr-8 lg:pr-0">
                 {selectedProject.title}
@@ -188,7 +191,7 @@ export default function Projects() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="mt-6 lg:mt-8 pb-4">
                 <h4 className="text-white text-xs lg:text-sm font-semibold mb-3">Technologies</h4>
                 <div className="flex flex-wrap gap-2">
@@ -199,8 +202,25 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </div>
 
+              {selectedProject.link && (
+                <div className="mt-4 pt-4 border-t border-white/10">
+                  <a
+                    href={selectedProject.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#d4af37] text-black font-bold text-xs uppercase tracking-wider hover:bg-white transition-colors rounded-sm"
+                  >
+                    <span>Visit Live Site</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
