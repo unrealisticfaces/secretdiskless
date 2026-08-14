@@ -27,7 +27,8 @@ export default function Projects() {
       images: ["/assets/clients/RED1.webp", "/assets/clients/RED2.webp", "/assets/clients/RED3.webp"],
       description: "Business website designed to showcase a gaming café's services, pricing, available games, and promotions.",
       details: "Customers can browse the available game library, view pricing and promotional offers, learn about the café's facilities and services, and find contact information for inquiries. The website is organized with a clean layout and intuitive navigation, making it simple for users to locate the information they need quickly.",
-      tags: ["React", "Vite", "HTML5", "CSS3", "JavaScript", "Firebase"]
+      tags: ["React", "Vite", "HTML5", "CSS3", "JavaScript", "Firebase"],
+      link: "https://redgaming.vercel.app/"
     },
     {
       title: "Cybercafe Management System",
@@ -41,7 +42,8 @@ export default function Projects() {
       images: ["/assets/clients/Gamers3.webp", "/assets/clients/Gamers1.webp", "/assets/clients/Gamers2.webp"],
       description: "GamerzNet is a modern gaming platform that brings gamers together through a clean, responsive, and user-friendly interface. It provides easy access to gaming content, updates, and community features in one place.",
       details: "Built with React.js and Vite.js, GamerzNet delivers fast performance, smooth navigation, and a seamless experience across desktop and mobile devices. Its modern design makes it an ideal platform for gamers to explore and stay connected.",
-      tags: ["React", "Vite", "PayMongo", "Firebase"]
+      tags: ["React", "Vite", "PayMongo", "Firebase"],
+      link: "https://gamerznet.vercel.app/"
     },
     {
       title: "Clinic Management System",
